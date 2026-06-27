@@ -1,0 +1,28 @@
+# ---- Frontend (Expo / React Native) ----
+frontend/node_modules/
+frontend/.expo/
+frontend/dist/
+frontend/web-build/
+frontend/.env
+frontend/.env.local
+
+# ---- Backend (Python) ----
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/.env
+backend/venv/
+backend/.venv/
+backend/*.egg-info/
+
+# Firebase admin credentials — never commit
+backend/*.json
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+npm-debug.*
+*.log

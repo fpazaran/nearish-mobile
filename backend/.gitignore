@@ -1,0 +1,5 @@
+*.env
+__pycache__/
+venv
+nearish-1e849-firebase-adminsdk-fbsvc-e83d48ac93.json
+dev_*.py

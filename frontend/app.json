@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "nearish",
+    "slug": "nearish-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "nearish",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#FDF0EF"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.nearish.mobile"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-web-browser",
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "Allow nearish to use Face ID for secure credential storage."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow nearish to access your photos to add to memories.",
+          "cameraPermission": "Allow nearish to use your camera to capture memories."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

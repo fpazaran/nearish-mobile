@@ -1,0 +1,57 @@
+# compose.mobile.yaml
+# Starts the backend + database for mobile development.
+# The Expo app runs locally on your machine / iOS simulator.
+#
+# Usage:
+#   docker compose -f compose.mobile.yaml up --build -d
+#   docker compose -f compose.mobile.yaml exec backend python init_db.py
+#   docker compose -f compose.mobile.yaml exec backend python db_tool.py --help
+#
+# Then set EXPO_PUBLIC_API_URL in frontend/.env to your machine's local IP:
+#   EXPO_PUBLIC_API_URL=http://<your-local-ip>:8000
+#   (Use `ifconfig | grep "inet "` to find your IP)
+
+services:
+  backend:
+    build:
+      context: ./backend
+    env_file:
+      - ./backend/.env
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-nearish}:${DB_PASSWORD:-nearish}@db:5432/${DB_NAME:-nearish}
+      WATCHFILES_FORCE_POLLING: "true"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    command:
+      - uvicorn
+      - main:app
+      - --host=0.0.0.0
+      - --port=8000
+      - --reload
+      - --reload-dir=/app
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:-nearish}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-nearish}
+      POSTGRES_DB: ${DB_NAME:-nearish}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  db_data:

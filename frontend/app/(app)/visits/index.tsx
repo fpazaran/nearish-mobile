@@ -10,7 +10,7 @@ import {
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useVisitsStore } from '@/src/store/visitsStore';
-import { GradientBackground, Card, Typography, LoadingScreen } from '@/src/components/ui';
+import { Background, Card, Typography, LoadingScreen } from '@/src/components/ui';
 import { colors, spacing, borderRadius, shadows } from '@/src/constants/theme';
 import { Visit } from '@/src/types/visits';
 import { formatDateRange, daysUntil } from '@/src/utils/dates';
@@ -42,7 +42,7 @@ export default function VisitsScreen() {
   }
 
   return (
-    <GradientBackground>
+    <Background>
       <ScrollView
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
@@ -88,7 +88,7 @@ export default function VisitsScreen() {
           </View>
         )}
       </ScrollView>
-    </GradientBackground>
+    </Background>
   );
 }
 

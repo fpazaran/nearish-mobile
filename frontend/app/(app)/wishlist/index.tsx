@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { GradientBackground, Card, Typography } from '@/src/components/ui';
+import { Background, Card, Typography } from '@/src/components/ui';
 import { colors, spacing } from '@/src/constants/theme';
 
 // Phase 5 — full implementation planned
 export default function WishlistScreen() {
   return (
-    <GradientBackground>
+    <Background>
       <ScrollView
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
@@ -34,7 +34,7 @@ export default function WishlistScreen() {
           </View>
         </Card>
       </ScrollView>
-    </GradientBackground>
+    </Background>
   );
 }
 

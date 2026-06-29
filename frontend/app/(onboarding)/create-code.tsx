@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { createCode } from '@/src/api/auth';
 import { useUserStore } from '@/src/store/userStore';
 import {
-  GradientBackground,
+  Background,
   Button,
   Typography,
   LoadingScreen,
@@ -52,7 +52,7 @@ export default function CreateCodeScreen() {
   const expiry = inviteCode ? formatExpiry(inviteCode.expires_at) : '';
 
   return (
-    <GradientBackground variant="warm">
+    <Background>
       <View style={styles.container}>
         {/* Back */}
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
@@ -107,7 +107,7 @@ export default function CreateCodeScreen() {
           </Typography>
         </View>
       </View>
-    </GradientBackground>
+    </Background>
   );
 }
 

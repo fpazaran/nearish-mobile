@@ -11,7 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { updateName } from '@/src/api/auth';
 import { useUserStore } from '@/src/store/userStore';
 import {
-  GradientBackground,
+  Background,
   Button,
   Input,
   Typography,
@@ -52,7 +52,7 @@ export default function EnterNameScreen() {
   };
 
   return (
-    <GradientBackground variant="warm">
+    <Background>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.flex}
@@ -107,7 +107,7 @@ export default function EnterNameScreen() {
           />
         </ScrollView>
       </KeyboardAvoidingView>
-    </GradientBackground>
+    </Background>
   );
 }
 

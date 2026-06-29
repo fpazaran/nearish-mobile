@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { GradientBackground, Typography } from '@/src/components/ui';
+import { Background, Typography } from '@/src/components/ui';
 import { colors, spacing, borderRadius, shadows } from '@/src/constants/theme';
 import { useUserStore } from '@/src/store/userStore';
 
@@ -10,7 +10,7 @@ export default function CreateJoinScreen() {
   const { name } = useUserStore();
 
   return (
-    <GradientBackground variant="warm">
+    <Background>
       <View style={styles.container}>
         {/* Greeting */}
         <View style={styles.header}>
@@ -45,7 +45,7 @@ export default function CreateJoinScreen() {
           Each code is valid for 30 minutes.
         </Typography>
       </View>
-    </GradientBackground>
+    </Background>
   );
 }
 

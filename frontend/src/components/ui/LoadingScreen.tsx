@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
-import { GradientBackground } from './GradientBackground';
+import { Background } from './Background';
 import { Typography } from './Typography';
 import { colors } from '../../constants/theme';
 
@@ -10,7 +10,7 @@ interface Props {
 
 export function LoadingScreen({ message }: Props) {
   return (
-    <GradientBackground>
+    <Background>
       <View style={styles.container}>
         <ActivityIndicator size="large" color={colors.primary} />
         {message ? (
@@ -19,7 +19,7 @@ export function LoadingScreen({ message }: Props) {
           </Typography>
         ) : null}
       </View>
-    </GradientBackground>
+    </Background>
   );
 }
 

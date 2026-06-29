@@ -4,7 +4,7 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { getVisitSchedule } from '@/src/api/visits';
 import { ActivitySnapshot } from '@/src/types/activities';
-import { GradientBackground, Card, Typography, LoadingScreen } from '@/src/components/ui';
+import { Background, Card, Typography, LoadingScreen } from '@/src/components/ui';
 import { colors, spacing, borderRadius } from '@/src/constants/theme';
 import { formatDate } from '@/src/utils/dates';
 
@@ -43,7 +43,7 @@ export default function VisitScheduleScreen() {
   }
 
   return (
-    <GradientBackground>
+    <Background>
       <ScrollView
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
@@ -101,7 +101,7 @@ export default function VisitScheduleScreen() {
           ))
         )}
       </ScrollView>
-    </GradientBackground>
+    </Background>
   );
 }
 

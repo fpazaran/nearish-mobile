@@ -10,7 +10,7 @@ import {
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useVisitsStore } from '@/src/store/visitsStore';
-import { GradientBackground, Button, Input, Typography } from '@/src/components/ui';
+import { Background, Button, Input, Typography } from '@/src/components/ui';
 import { colors, spacing } from '@/src/constants/theme';
 
 export default function AddVisitScreen() {
@@ -50,7 +50,7 @@ export default function AddVisitScreen() {
   };
 
   return (
-    <GradientBackground>
+    <Background>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.flex}
@@ -108,7 +108,7 @@ export default function AddVisitScreen() {
           <Button label="Create visit" onPress={handleCreate} loading={isLoading} />
         </ScrollView>
       </KeyboardAvoidingView>
-    </GradientBackground>
+    </Background>
   );
 }
 

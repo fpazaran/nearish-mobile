@@ -12,7 +12,7 @@ import * as Google from 'expo-auth-session/providers/google';
 import { GoogleAuthProvider, signInWithCredential } from 'firebase/auth';
 import { Ionicons } from '@expo/vector-icons';
 import { firebaseAuth } from '@/src/lib/firebase';
-import { GradientBackground } from '@/src/components/ui/GradientBackground';
+import { Background } from '@/src/components/ui/Background';
 import { Button } from '@/src/components/ui/Button';
 import { Typography } from '@/src/components/ui/Typography';
 import { colors, spacing } from '@/src/constants/theme';
@@ -47,7 +47,7 @@ export default function LandingScreen() {
   };
 
   return (
-    <GradientBackground variant="warm" withSafeArea={false}>
+    <Background withSafeArea={false}>
       <View style={styles.container}>
         {/* Top section: branding */}
         <View style={styles.header}>
@@ -98,7 +98,7 @@ export default function LandingScreen() {
           </Typography>
         </View>
       </View>
-    </GradientBackground>
+    </Background>
   );
 }
 

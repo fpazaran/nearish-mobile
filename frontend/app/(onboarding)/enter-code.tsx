@@ -13,7 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { joinCouple } from '@/src/api/auth';
 import { useUserStore } from '@/src/store/userStore';
 import {
-  GradientBackground,
+  Background,
   Button,
   Typography,
 } from '@/src/components/ui';
@@ -85,7 +85,7 @@ export default function EnterCodeScreen() {
   };
 
   return (
-    <GradientBackground variant="warm">
+    <Background>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.flex}
@@ -149,7 +149,7 @@ export default function EnterCodeScreen() {
           />
         </ScrollView>
       </KeyboardAvoidingView>
-    </GradientBackground>
+    </Background>
   );
 }
 

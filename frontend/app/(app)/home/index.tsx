@@ -13,7 +13,7 @@ import { useHomeStore } from '@/src/store/homeStore';
 import { useUserStore } from '@/src/store/userStore';
 import { useAuthStore } from '@/src/store/authStore';
 import { Home } from '@/src/types/home';
-import { GradientBackground, Card, Typography, LoadingScreen } from '@/src/components/ui';
+import { Background, Card, Typography, LoadingScreen } from '@/src/components/ui';
 import { colors, spacing, borderRadius } from '@/src/constants/theme';
 import { VisitState } from '@/src/types/visits';
 import { formatDateRange, getVisitStatusLabel } from '@/src/utils/dates';
@@ -42,7 +42,7 @@ export default function HomeScreen() {
   const stateLabel = home ? getVisitStatusLabel(home.state) : '';
 
   return (
-    <GradientBackground>
+    <Background>
       <ScrollView
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
@@ -99,7 +99,7 @@ export default function HomeScreen() {
           </View>
         </View>
       </ScrollView>
-    </GradientBackground>
+    </Background>
   );
 }
 

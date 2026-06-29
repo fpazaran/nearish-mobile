@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useVisitsStore } from '@/src/store/visitsStore';
-import { GradientBackground, Card, Button, Typography } from '@/src/components/ui';
+import { Background, Card, Button, Typography } from '@/src/components/ui';
 import { colors, spacing } from '@/src/constants/theme';
 import { formatDateRange, daysUntil } from '@/src/utils/dates';
 
@@ -14,12 +14,12 @@ export default function VisitDetailScreen() {
 
   if (!visit) {
     return (
-      <GradientBackground>
+      <Background>
         <View style={styles.centered}>
           <Typography variant="bodySmall">Visit not found.</Typography>
           <Button label="Back" onPress={() => router.back()} variant="ghost" fullWidth={false} />
         </View>
-      </GradientBackground>
+      </Background>
     );
   }
 
@@ -28,7 +28,7 @@ export default function VisitDetailScreen() {
   const isPast = daysUntil(visit.end) < 0;
 
   return (
-    <GradientBackground>
+    <Background>
       <ScrollView
         contentContainerStyle={styles.scroll}
         showsVerticalScrollIndicator={false}
@@ -69,7 +69,7 @@ export default function VisitDetailScreen() {
           variant="outline"
         />
       </ScrollView>
-    </GradientBackground>
+    </Background>
   );
 }
 

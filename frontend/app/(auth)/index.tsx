@@ -89,7 +89,7 @@ export default function LandingScreen() {
             disabled={!request || isLoading}
             activeOpacity={0.85}
           >
-            <Ionicons name="logo-google" size={20} color="#4285F4" />
+            <Ionicons name="logo-google" size={20} color={colors.googleBlue} />
             <Text style={styles.googleButtonText}>Continue with Google</Text>
           </TouchableOpacity>
 
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: 48,
-    backgroundColor: 'rgba(253,121,121,0.12)',
+    backgroundColor: colors.primaryTint12,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 4,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
-    backgroundColor: 'rgba(255,255,255,0.7)',
+    backgroundColor: colors.surfaceOverlay70,
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 14,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: 999,
     paddingVertical: 16,
-    shadowColor: '#000',
+    shadowColor: colors.shadow,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.12,
     shadowRadius: 8,

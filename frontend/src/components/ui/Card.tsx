@@ -50,13 +50,13 @@ export function CardSection({ title, children, style }: SectionProps) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'rgba(255,255,255,0.92)',
+    backgroundColor: colors.surfaceOverlay92,
     borderRadius: borderRadius.lg,
     padding: 20,
     ...shadows.md,
   },
   tinted: {
-    backgroundColor: 'rgba(253,172,172,0.18)',
+    backgroundColor: colors.primaryLightTint18,
     borderWidth: 1,
     borderColor: colors.border,
   },

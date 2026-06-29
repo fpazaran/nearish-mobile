@@ -195,13 +195,13 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.full,
   },
   badgePlanned: {
-    backgroundColor: 'rgba(253,121,121,0.1)',
+    backgroundColor: colors.primaryTint10,
   },
   badgeActive: {
-    backgroundColor: 'rgba(253,121,121,0.2)',
+    backgroundColor: colors.primaryTint20,
   },
   badgePast: {
-    backgroundColor: 'rgba(107,114,128,0.1)',
+    backgroundColor: colors.textSecondaryTint10,
   },
   scheduleLink: {
     flexDirection: 'row',

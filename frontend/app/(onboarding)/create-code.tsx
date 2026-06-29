@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   codeCard: {
-    backgroundColor: 'rgba(255,255,255,0.92)',
+    backgroundColor: colors.surfaceOverlay92,
     borderRadius: borderRadius.lg,
     paddingVertical: spacing.xl,
     paddingHorizontal: spacing.lg,
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     gap: 8,
-    backgroundColor: 'rgba(253,172,172,0.2)',
+    backgroundColor: colors.primaryLightTint20,
     borderRadius: borderRadius.md,
     padding: spacing.md,
   },

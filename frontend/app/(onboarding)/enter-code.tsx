@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
   },
   digitBoxFilled: {
     borderColor: colors.primary,
-    backgroundColor: 'rgba(253,121,121,0.05)',
+    backgroundColor: colors.primaryTint05,
   },
   digitBoxError: {
     borderColor: colors.error,

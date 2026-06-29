@@ -20,7 +20,7 @@ export default function AppLayout() {
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.medium_pink,
         tabBarStyle: {
-          backgroundColor: 'rgba(253,240,239,0.97)',
+          backgroundColor: colors.backgroundOverlay97,
           borderTopColor: colors.border,
           borderTopWidth: 1,
           paddingBottom: 4,
